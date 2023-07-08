@@ -1,10 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+// Theme
+/* 1. Create global variables for text and background color */
+:root {
+  --color-text: black;
+  --color-background: white;
+}
+
+/* 2. Add conditional styling for dark mode preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: white;
+    --color-background: #333333;
+  }
+}
 
 html,
 body {
   margin: unset;
   padding: unset;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  .material-symbols-rounded {
+    color: var(--color-text);
+  }
 }
 
 * {

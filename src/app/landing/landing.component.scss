@@ -12,7 +12,7 @@ $border-radius: 8px;
     display: none;
   }
   .btn {
-    padding: 0.5em 1em;
+    padding: 0.5rem 1rem;
     background-color: $accent-color;
     color: $accent-contrast-color;
     border-radius: $border-radius;
@@ -23,6 +23,7 @@ $border-radius: 8px;
     min-height: 64px;
     margin: unset;
     padding: unset;
+    padding-top: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,7 +34,7 @@ $border-radius: 8px;
         display: flex;
         li {
           list-style-type: none;
-          padding: 0.5em 1em;
+          padding: 0.5rem 1rem;
           text-align: center;
           height: fit-content;
           overflow: hidden;
@@ -55,24 +56,19 @@ $border-radius: 8px;
   }
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 600px) {
-}
-
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
   .landing {
     width: 100%;
-    padding: 0 1em;
+    padding: 0 1rem;
     .menu-btn {
       display: block;
     }
-    nav {
-      display: none;
+    .top-menu {
+      padding: unset;
+      nav {
+        display: none;
+      }
     }
   }
 }
