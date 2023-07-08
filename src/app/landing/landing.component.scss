@@ -54,6 +54,17 @@ $border-radius: 8px;
       }
     }
   }
+  .hero-section {
+    min-height: 300px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    .introduction {
+      background-color: red;
+    }
+    .introduction-image {
+      background-color: green;
+    }
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
