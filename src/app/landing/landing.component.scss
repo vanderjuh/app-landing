@@ -1,0 +1,95 @@
+$accent-color: #71b8c3;
+$accent-contrast-color: white;
+$border-radius: 8px;
+
+.landing {
+  width: 90%;
+  margin: 0 auto;
+  .menu-btn {
+    border: unset;
+    background-color: unset;
+    cursor: pointer;
+    display: none;
+  }
+  .btn {
+    padding: 0.5em 1em;
+    background-color: $accent-color;
+    color: $accent-contrast-color;
+    border-radius: $border-radius;
+    text-decoration: unset;
+  }
+  .top-menu {
+    width: 100%;
+    min-height: 64px;
+    margin: unset;
+    padding: unset;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    nav {
+      ul {
+        padding: unset;
+        margin: unset;
+        display: flex;
+        li {
+          list-style-type: none;
+          padding: 0.5em 1em;
+          text-align: center;
+          height: fit-content;
+          overflow: hidden;
+          word-break: keep-all;
+          text-overflow: ellipsis;
+          &:not(:last-child) {
+            border-right: solid $accent-color 1px;
+          }
+          a {
+            text-decoration: unset;
+            color: inherit;
+            &:hover {
+              border-bottom: 2px solid $accent-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .landing {
+    width: 100%;
+    padding: 0 1em;
+    .menu-btn {
+      display: block;
+    }
+    nav {
+      display: none;
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  .landing {
+    font-size: x-small;
+    .schedule {
+      display: none;
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1020px) {
+  .landing {
+    font-size: smaller;
+  }
+}
