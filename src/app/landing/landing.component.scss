@@ -4,12 +4,17 @@ $border-radius: 4px;
 
 .landing {
   width: 90%;
+  max-width: 1280px;
   margin: 0 auto;
   .menu-btn {
     border: unset;
     background-color: unset;
     cursor: pointer;
     display: none;
+  }
+  .links {
+    display: flex;
+    gap: 1rem;
   }
   .btn {
     width: fit-content;
@@ -61,6 +66,7 @@ $border-radius: 4px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     margin-top: 4rem;
+    position: relative;
     .introduction {
       display: flex;
       flex-direction: column;
@@ -114,7 +120,7 @@ $border-radius: 4px;
     height: 75%;
     position: absolute;
     background-color: $accent-color;
-    filter: blur(62px);
+    filter: blur(40px);
   }
   .flower-shadow-left {
     @extend .flower-shadow;
@@ -138,52 +144,21 @@ $border-radius: 4px;
     right: -64px;
     top: 16%;
   }
+  .flower-8 {
+    position: absolute;
+    top: 25%;
+    left: calc(-76px * 1.2);
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .landing {
-    width: 100%;
-    padding: 0 1rem;
-    .menu-btn {
-      display: block;
-    }
-    .top-menu {
-      padding: unset;
-      nav {
-        display: none;
-      }
-    }
-    .hero-section {
-      .introduction {
-        padding-right: unset;
-        h1 {
-          font-size: 2rem;
-        }
-      }
-    }
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 992px) {
   .landing {
-    font-size: x-small;
-    .schedule {
-      display: none;
-    }
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (max-width: 1020px) {
-  .landing {
-    font-size: smaller;
-    .hero-section {
-      grid-template-columns: 1fr;
-      .introduction-image {
-        display: none;
-      }
-    }
   }
 }
