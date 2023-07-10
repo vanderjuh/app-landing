@@ -1,6 +1,6 @@
 {
   "landing": {
-    "areas-of-activity": [
+    "areasOfActivity": [
       {
         "title": "Psicoterapia",
         "subtitle": "Psicoterapia Individual",
@@ -79,7 +79,7 @@
         "btnLabel": "Agendar"
       }
     ],
-    "about-me": {
+    "aboutMe": {
       "name": "Gionna Souza",
       "council": "CRP",
       "profile-img": "",

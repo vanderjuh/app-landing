@@ -8,7 +8,7 @@
     <img src="../../assets/imgs/logo.png" alt="Giovanna Souza">
     <div class="links">
       <nav>
-        <ul>
+        <ul class="zeroed-ul">
           <li><a href="#">Início</a></li>
           <li><a href="#">Áreas de Atuação</a></li>
           <li><a href="#">Atendimento</a></li>
@@ -25,7 +25,7 @@
     <div class="introduction">
       <h1>Construa seu Caminho de Autoconhecimento e Equilíbrio Emocional na Jornada terapêutica</h1>
       <div class="introduction-info">
-        <ul>
+        <ul class="zeroed-ul">
           <li>Empatia</li>
           <li>Confiança</li>
           <li>Efetividade</li>
@@ -42,4 +42,23 @@
       <div class="flower-shadow-right"></div>
     </div>
   </header>
+  <section class="section services">
+    <h2>Áreas de Atuação</h2>
+    <div class="services-content">
+      <div class="service-list">
+        <ul class="zeroed-ul">
+          <li *ngFor="let activity of response.areasOfActivity" (click)="onSelectedActivity(activity)">
+            {{activity.title}}
+          </li>
+        </ul>
+      </div>
+      <div *ngIf="selectedActivity" class="service-explanation">
+        <h3>{{selectedActivity.title}}</h3>
+        <div class="service-explanation-topics">
+          <div *ngFor="let item of selectedActivity.items">{{item}}</div>
+        </div>
+        <a [href]="selectedActivity" class="btn">{{selectedActivity.btnLabel}}</a>
+      </div>
+    </div>
+  </section>
 </div>

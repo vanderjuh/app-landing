@@ -30,3 +30,16 @@ body {
 * {
   box-sizing: border-box;
 }
+
+h1,
+h2,
+h3,
+p {
+  padding: unset;
+  margin: unset;
+}
+
+.zeroed-ul {
+  padding: unset;
+  margin: unset;
+}
