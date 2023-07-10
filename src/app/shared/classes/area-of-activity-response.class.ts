@@ -1,4 +1,5 @@
 export class AreaOfActivityResponse {
+  id!: number;
   title!: string;
   subtitle!: string;
   btnLabel!: string;

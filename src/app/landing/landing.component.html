@@ -42,23 +42,29 @@
       <div class="flower-shadow-right"></div>
     </div>
   </header>
-  <section class="section services">
+  <section class="section activities">
     <h2>Áreas de Atuação</h2>
-    <div class="services-content">
-      <div class="service-list">
+    <img src="../../assets/imgs/flower-12.png" alt="Flower" class="flower-12">
+    <img src="../../assets/imgs/flower-4.png" alt="Flower" class="flower-4">
+    <div class="activities-content">
+      <div class="activities-list">
         <ul class="zeroed-ul">
-          <li *ngFor="let activity of response.areasOfActivity" (click)="onSelectedActivity(activity)">
+          <li *ngFor="let activity of response?.areasOfActivity" (click)="onSelectedActivity(activity)"
+            [class.selected-activity]="selectedActivity?.id === activity.id">
             {{activity.title}}
           </li>
         </ul>
       </div>
-      <div *ngIf="selectedActivity" class="service-explanation">
+      <div *ngIf="selectedActivity" class="activities-explanation">
         <h3>{{selectedActivity.title}}</h3>
-        <div class="service-explanation-topics">
-          <div *ngFor="let item of selectedActivity.items">{{item}}</div>
+        <div class="activities-explanation-topics">
+          <div class="activities-explanation-topic" *ngFor="let item of selectedActivity.items">{{item}}</div>
         </div>
         <a [href]="selectedActivity" class="btn">{{selectedActivity.btnLabel}}</a>
       </div>
     </div>
+  </section>
+  <section class="section">
+    <h2>Atendimento</h2>
   </section>
 </div>

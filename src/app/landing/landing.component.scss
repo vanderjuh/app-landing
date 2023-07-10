@@ -1,7 +1,7 @@
 $accent-color: #71b8c3;
 $accent-background-color: hsla(188, 41%, 60%, 0.2);
 $accent-contrast-color: white;
-$border-radius: 4px;
+$border-radius: 8px;
 $page-padding: 0 5rem;
 
 .landing {
@@ -140,31 +140,33 @@ $page-padding: 0 5rem;
     .flower-8 {
       position: absolute;
       top: 25%;
-      left: calc(-76px * 1.2);
+      left: 0;
     }
   }
   .section {
+    min-height: 300px;
     padding: $page-padding;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
-  .services {
-    min-height: 300px;
+  .activities {
     background-color: $accent-background-color;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    .services-content {
+    position: relative;
+    z-index: 9;
+    .activities-content {
       display: grid;
       grid-template-columns: 1fr 2fr;
-      .service-list {
+      .activities-list {
         ul {
           list-style-type: none;
           display: flex;
           flex-direction: column;
           gap: 1rem;
           li {
-            width: 60%;
+            width: 50%;
             padding: 0.5rem 1rem;
             background-color: $accent-contrast-color;
             border-radius: $border-radius;
@@ -175,16 +177,40 @@ $page-padding: 0 5rem;
           }
         }
       }
-      .service-explanation {
+      .activities-explanation {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        .service-explanation-topics {
+        .activities-explanation-topics {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
+          .activities-explanation-topic {
+            padding: 1rem;
+            text-align: justify;
+            &:not(:last-child) {
+              border-right: solid 1px $accent-color;
+            }
+          }
         }
       }
+    }
+    .selected-activity {
+      border: solid 1px $accent-color;
+    }
+    .flower-12 {
+      position: absolute;
+      left: 0;
+      bottom: -1%;
+      transform: scale(1.5);
+      z-index: -1;
+    }
+    .flower-4 {
+      position: absolute;
+      right: 0;
+      top: -15%;
+      transform: rotate(-30deg);
+      z-index: -1;
     }
   }
 }

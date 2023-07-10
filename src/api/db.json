@@ -2,6 +2,7 @@
   "landing": {
     "areasOfActivity": [
       {
+        "id": 1,
         "title": "Psicoterapia",
         "subtitle": "Psicoterapia Individual",
         "btnLabel": "Agendar",
@@ -12,6 +13,7 @@
         ]
       },
       {
+        "id": 2,
         "title": "Terapia Casal",
         "subtitle": "Terapia Casal",
         "btnLabel": "Agendar",
@@ -22,6 +24,7 @@
         ]
       },
       {
+        "id": 3,
         "title": "Terapia Familiar",
         "subtitle": "Terapia Familiar",
         "btnLabel": "Agendar",
@@ -32,6 +35,7 @@
         ]
       },
       {
+        "id": 4,
         "title": "Gerenciamento do Estresse",
         "subtitle": "Gerenciamento do Estresse",
         "btnLabel": "Agendar",
@@ -42,6 +46,7 @@
         ]
       },
       {
+        "id": 5,
         "title": "Tratamento da Ansiedade",
         "subtitle": "Tratamento da Ansiedade",
         "btnLabel": "Agendar",
@@ -52,6 +57,7 @@
         ]
       },
       {
+        "id": 6,
         "title": "Tratamento da Depresssão",
         "subtitle": "Tratamento da Depresssão",
         "btnLabel": "Agendar",
