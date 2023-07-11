@@ -5,6 +5,7 @@
 :root {
   --color-text: black;
   --color-background: white;
+  --color-background-glass: rgba(255, 255, 255, 0.8);
 }
 
 /* 2. Add conditional styling for dark mode preference */
@@ -12,6 +13,7 @@
   :root {
     --color-text: white;
     --color-background: #333333;
+    --color-background-glass: rgba(51, 51, 51, 0.8);
   }
 }
 

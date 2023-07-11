@@ -5,7 +5,7 @@ $border-radius: 8px;
 $page-padding: 0 5rem;
 
 * {
-  transition: all 0.2s;
+  transition: all 0.1s;
 }
 
 .landing {
@@ -171,7 +171,7 @@ $page-padding: 0 5rem;
           li {
             width: 50%;
             padding: 0.5rem 1rem;
-            background-color: $accent-contrast-color;
+            background-color: var(--color-background);
             border-radius: $border-radius;
             text-align: center;
             color: $accent-color;
@@ -242,7 +242,7 @@ $page-padding: 0 5rem;
         }
         .btn {
           color: $accent-color;
-          background-color: $accent-contrast-color;
+          background-color: var(--color-background);
         }
       }
     }
@@ -266,7 +266,10 @@ $page-padding: 0 5rem;
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5);
   }
   .top-menu-scrolled {
-    @extend .box-shadow;
     padding: 1rem;
+    background: var(--color-background-glass);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
   }
 }

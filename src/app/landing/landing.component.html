@@ -68,7 +68,7 @@
     <h2>Atendimento</h2>
     <div class="service-items">
       <div *ngFor="let serviceItem of response?.services; let i = index"
-        [ngClass]="{'service-item': true, 'flower-7': (i === 0), 'flower-3': (i === (response.services.length - 1))}">
+        [ngClass]="{'service-item': true, 'flower-7': (i === 0), 'flower-3': (i === (response.services.length - 1)), 'box-shadow': true}">
         <img [src]="'../../assets/imgs/'+serviceItem.imgSrc" attr.alt="{{serviceItem.title}}">
         <h3>{{serviceItem.title}}</h3>
         <p>{{serviceItem.description}}</p>
