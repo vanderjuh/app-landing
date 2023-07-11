@@ -10,8 +10,8 @@
       <nav>
         <ul class="zeroed-ul">
           <li><a href="#">Início</a></li>
-          <li><a href="#">Áreas de Atuação</a></li>
-          <li><a href="#">Atendimento</a></li>
+          <li><a href="#activities">Áreas de Atuação</a></li>
+          <li><a href="#services">Atendimento</a></li>
           <li><a href="#">Quem sou eu?</a></li>
           <li><a href="#">Depoimento</a></li>
           <li><a href="#">FAQ</a></li>
@@ -38,11 +38,11 @@
     </div>
     <div class="introduction-image flower-9 flower-7">
       <div class="flower-shadow-left"></div>
-      <img src="../../assets/imgs/intro-cover.png" alt="Intro Cover">
+      <img class="box-shadow" src="../../assets/imgs/intro-cover.png" alt="Intro Cover">
       <div class="flower-shadow-right"></div>
     </div>
   </header>
-  <section class="section activities">
+  <section id="activities" class="section activities">
     <h2>Áreas de Atuação</h2>
     <img src="../../assets/imgs/flower-12.png" alt="Flower" class="flower-12">
     <img src="../../assets/imgs/flower-4.png" alt="Flower" class="flower-4">
@@ -55,16 +55,25 @@
           </li>
         </ul>
       </div>
-      <div *ngIf="selectedActivity" class="activities-explanation">
+      <div *ngIf="selectedActivity" class="activities-explanation box-shadow">
         <h3>{{selectedActivity.title}}</h3>
         <div class="activities-explanation-topics">
           <div class="activities-explanation-topic" *ngFor="let item of selectedActivity.items">{{item}}</div>
         </div>
-        <a [href]="selectedActivity" class="btn">{{selectedActivity.btnLabel}}</a>
+        <a href="#" class="btn">{{selectedActivity.btnLabel}}</a>
       </div>
     </div>
   </section>
-  <section class="section">
+  <section id="services" class="section services">
     <h2>Atendimento</h2>
+    <div class="service-items">
+      <div *ngFor="let serviceItem of response?.services; let i = index"
+        [ngClass]="{'service-item': true, 'flower-7': (i === 0), 'flower-3': (i === (response.services.length - 1))}">
+        <img [src]="'../../assets/imgs/'+serviceItem.imgSrc" attr.alt="{{serviceItem.title}}">
+        <h3>{{serviceItem.title}}</h3>
+        <p>{{serviceItem.description}}</p>
+        <a href="#" class="btn">{{serviceItem.btnLabel}}</a>
+      </div>
+    </div>
   </section>
 </div>

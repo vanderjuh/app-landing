@@ -71,16 +71,19 @@
     "services": [
       {
         "title": "Atendimento Domiciliar",
+        "imgSrc": "casa.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "btnLabel": "Agendar"
       },
       {
         "title": "Atendimento do Consultório",
+        "imgSrc": "diva.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "btnLabel": "Agendar"
       },
       {
         "title": "Atendimento Online",
+        "imgSrc": "pc.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "btnLabel": "Agendar"
       }

@@ -27,6 +27,7 @@ $page-padding: 0 5rem;
     color: $accent-contrast-color;
     border-radius: $border-radius;
     text-decoration: unset;
+    font-weight: 600;
   }
   .top-menu {
     width: 100%;
@@ -130,13 +131,6 @@ $page-padding: 0 5rem;
       z-index: -1;
       left: -88px;
     }
-    .flower-7:before {
-      content: url(../../assets/imgs/flower-7.png);
-      position: absolute;
-      z-index: -1;
-      right: -64px;
-      top: 16%;
-    }
     .flower-8 {
       position: absolute;
       top: 25%;
@@ -148,6 +142,7 @@ $page-padding: 0 5rem;
     padding: $page-padding;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    overflow: hidden;
   }
   .activities {
     background-color: $accent-background-color;
@@ -201,16 +196,65 @@ $page-padding: 0 5rem;
     .flower-12 {
       position: absolute;
       left: 0;
-      bottom: -1%;
-      transform: scale(1.5);
+      bottom: 0;
       z-index: -1;
     }
     .flower-4 {
       position: absolute;
       right: 0;
-      top: -15%;
+      top: 0;
       transform: rotate(-30deg);
       z-index: -1;
     }
+  }
+  .services {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    z-index: 9;
+    .service-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12rem;
+      .service-item {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        border-radius: $border-radius;
+        background-color: $accent-color;
+        align-items: center;
+        gap: 1rem;
+        padding: 2rem;
+        font-size: larger;
+        text-align: center;
+        position: relative;
+        img {
+          width: 40%;
+        }
+        .btn {
+          color: $accent-color;
+          background-color: $accent-contrast-color;
+        }
+      }
+    }
+  }
+  .flower-7:before {
+    content: url(../../assets/imgs/flower-7.png);
+    position: absolute;
+    z-index: -1;
+    right: -64px;
+    top: 16%;
+  }
+  .flower-3:after {
+    content: url(../../assets/imgs/flower-3.png);
+    position: absolute;
+    z-index: -1;
+    left: -121px;
+    top: 16%;
+    transform: rotate(-30deg);
+  }
+  .box-shadow {
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5);
   }
 }
