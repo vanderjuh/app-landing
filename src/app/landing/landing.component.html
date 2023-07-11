@@ -38,7 +38,7 @@
     </div>
     <div class="introduction-image flower-9 flower-7">
       <div class="flower-shadow-left"></div>
-      <img class="box-shadow" src="../../assets/imgs/intro-cover.png" alt="Intro Cover">
+      <img src="../../assets/imgs/intro-cover.png" alt="Intro Cover">
       <div class="flower-shadow-right"></div>
     </div>
   </header>
@@ -55,7 +55,7 @@
           </li>
         </ul>
       </div>
-      <div *ngIf="selectedActivity" class="activities-explanation box-shadow">
+      <div *ngIf="selectedActivity" class="activities-explanation">
         <h3>{{selectedActivity.title}}</h3>
         <div class="activities-explanation-topics">
           <div class="activities-explanation-topic" *ngFor="let item of selectedActivity.items">{{item}}</div>

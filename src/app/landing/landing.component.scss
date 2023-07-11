@@ -4,6 +4,10 @@ $accent-contrast-color: white;
 $border-radius: 8px;
 $page-padding: 0 5rem;
 
+* {
+  transition: all 0.2s;
+}
+
 .landing {
   margin: 0 auto;
   display: flex;
@@ -38,6 +42,10 @@ $page-padding: 0 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-background);
+    z-index: 9999;
     nav {
       ul {
         display: flex;
@@ -256,5 +264,9 @@ $page-padding: 0 5rem;
   }
   .box-shadow {
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5);
+  }
+  .top-menu-scrolled {
+    @extend .box-shadow;
+    padding: 1rem;
   }
 }

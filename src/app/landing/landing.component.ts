@@ -19,10 +19,22 @@ export class LandingComponent implements OnInit {
   constructor(private landingApiService: LandingApiService) { }
 
   async ngOnInit(): Promise<void> {
+    this.onScroll();
     this.response = await lastValueFrom(this.landingApiService.get());
     if (this.response.areasOfActivity?.length) {
       this.selectedActivity = this.response.areasOfActivity[0];
     }
+  }
+
+  onScroll() {
+    document.addEventListener('scroll', (event) => {
+      const isOnTop = ((document.body.scrollTop + document.documentElement.scrollTop) === 0);
+      if (isOnTop) {
+        document.querySelector('menu')?.classList.remove('top-menu-scrolled')
+      } else {
+        document.querySelector('menu')?.classList.add('top-menu-scrolled')
+      }
+    });
   }
 
   onSelectedActivity(activity: AreaOfActivityResponse): void {
