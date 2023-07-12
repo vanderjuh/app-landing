@@ -151,6 +151,9 @@ $page-padding: 0 5rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     overflow: hidden;
+    h2 {
+      color: #334155;
+    }
   }
   .activities {
     background-color: $accent-background-color;
