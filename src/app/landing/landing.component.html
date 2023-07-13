@@ -76,4 +76,24 @@
       </div>
     </div>
   </section>
+  <section class="section background-gradient-accent">
+    <h2>Quem sou Eu?</h2>
+    <div class="about-me">
+      <div class="about-me-information">
+        <div>
+          <p class="about-me-name">{{response.aboutMe.name}}</p>
+          <p class="about-me-council">{{response.aboutMe.council}}</p>
+        </div>
+        <p class="about-me-description">{{response.aboutMe.description}}</p>
+      </div>
+      <div class="about-me-profile">
+        <img class="img" src="../../assets/imgs/profile-img.png" alt="Psicologa">
+        <ul class="zeroed-ul">
+          <li *ngFor="let social of response.aboutMe.socialMedias">
+            <a href="{{social.url}}"><img src="../../assets/imgs/{{social.imgUrl}}" alt="{{social.title}}"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </div>

@@ -96,29 +96,29 @@ export class LandingApiService {
       }
     ],
     aboutMe: {
-      name: "Gionna Souza",
-      council: "CRP",
+      name: "Giovanna Souza",
+      council: "CRP 15/1878X",
       profileImg: "",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices urna et lorem ornare consectetur eget ut neque. Duis ullamcorper tempor tempus. Phasellus eget commodo est, vitae luctus libero. Vestibulum nibh tellus, condimentum vitae tempor vel, aliquam sit amet justo. Ut lectus est, tincidunt blandit felis iaculis, sagittis eleifend orci. Sed dapibus vehicula imperdiet. Cras libero elit, semper at pharetra gravida, lobortis a tellus. Donec sit amet velit ex. Sed sit amet nibh justo. Quisque lorem orci, dapibus nec erat at, malesuada blandit quam. Donec suscipit ligula quis diam lacinia, ac tempor leo hendrerit.",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices urna et lorem ornare consectetur eget ut neque. Duis ullamcorper tempor tempus. Phasellus eget commodo est, vitae luctus libero. Vestibulum nibh tellus, condimentum vitae tempor vel, aliquam sit amet justo. Ut lectus est, tincidunt blandit felis iaculis, sagittis eleifend orci. Sed dapibus vehicula imperdiet. Cras libero elit, semper at pharetra gravida, lobortis a tellus. Donec sit amet velit ex. Sed sit amet nibh justo. Quisque lorem orci, dapibus nec erat at, malesuada blandit quam. Donec suscipit ligula quis diam lacinia, ac tempor leo hendrerit.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices urna et lorem ornare consectetur eget ut neque. Duis ullamcorper tempor tempus. Phasellus eget commodo est, vitae luctus libero. Vestibulum nibh tellus, condimentum vitae tempor vel, aliquam sit amet justo.",
       socialMedias: [
         {
           title: "Instagram",
-          icon: "instagram",
+          imgUrl: "instagram.png",
           url: "#"
         },
         {
           title: "LinkedIn",
-          icon: "linkedin",
+          imgUrl: "linkedin.png",
           url: "#"
         },
         {
           title: "Facebook",
-          icon: "facebook",
+          imgUrl: "facebook.png",
           url: "#"
         },
         {
           title: "Twitter",
-          icon: "twitter",
+          imgUrl: "twitter.png",
           url: "#"
         }
       ]

@@ -5,7 +5,7 @@ export class AboutMeResponse {
   description!: string;
   socialMedias!: {
     title: string;
-    icon: string;
+    imgUrl: string;
     url: string;
   }[]
 }

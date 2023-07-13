@@ -150,10 +150,6 @@ $page-padding: 0 5rem;
     padding: $page-padding;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    overflow: hidden;
-    h2 {
-      color: #334155;
-    }
   }
   .activities {
     background-color: $accent-background-color;
@@ -214,7 +210,7 @@ $page-padding: 0 5rem;
       position: absolute;
       right: 0;
       top: 0;
-      transform: rotate(-30deg);
+      transform: rotate(-180deg);
       z-index: -1;
     }
   }
@@ -250,6 +246,40 @@ $page-padding: 0 5rem;
       }
     }
   }
+  .about-me {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    .about-me-information {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      .about-me-name {
+        font-weight: 600;
+        font-size: xx-large;
+      }
+      .about-me-council {
+        font-size: x-large;
+      }
+      .about-me-description {
+        white-space: pre-line;
+        font-size: larger;
+      }
+    }
+    .about-me-profile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .img {
+        margin-top: -96px;
+      }
+      ul {
+        margin-top: -32px;
+        display: flex;
+        list-style-type: none;
+      }
+    }
+  }
   .flower-7:before {
     content: url(../../assets/imgs/flower-7.png);
     position: absolute;
@@ -274,5 +304,8 @@ $page-padding: 0 5rem;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+  }
+  .background-gradient-accent {
+    background: linear-gradient(0deg, transparent 0%, $accent-background-color 100%);
   }
 }
