@@ -280,6 +280,29 @@ $page-padding: 0 5rem;
       }
     }
   }
+  .testimonies {
+    position: relative;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .testimonies-information {
+      width: 90%;
+      margin: 0 auto;
+    }
+    .flower-1 {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+    .flower-5 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+    }
+  }
   .flower-7:before {
     content: url(../../assets/imgs/flower-7.png);
     position: absolute;
@@ -307,5 +330,33 @@ $page-padding: 0 5rem;
   }
   .background-gradient-accent {
     background: linear-gradient(0deg, transparent 0%, $accent-background-color 100%);
+  }
+  .slider {
+    width: 100%;
+    min-height: 150px;
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: 5% auto 5%;
+    grid-template-rows: repeat(3, 100%);
+    .slider-arrow {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: $accent-color;
+      font-weight: 600;
+      cursor: pointer;
+      .material-symbols-rounded {
+        font-size: 64px;
+        color: $accent-color;
+      }
+    }
+    .slider-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: large;
+    }
   }
 }

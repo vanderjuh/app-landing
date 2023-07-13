@@ -125,11 +125,13 @@ export class LandingApiService {
     },
     testimonies: [
       {
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices urna et lorem ornare consectetur eget ut neque.",
+        id: 1,
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices urna et lorem ornare consectetur eget ut neque. Duis ullamcorper tempor tempus. Phasellus eget commodo est, vitae luctus libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices urna et lorem ornare consectetur eget ut neque. Duis ullamcorper tempor tempus. Phasellus eget commodo est, vitae luctus libero.",
         author: "Ana"
       },
       {
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices urna et lorem ornare consectetur eget ut neque.",
+        id: 2,
+        text: "Vestibulum nibh tellus, condimentum vitae tempor vel, aliquam sit amet justo. Ut lectus est, tincidunt blandit felis iaculis, sagittis eleifend orci. Vestibulum nibh tellus, condimentum vitae tempor vel, aliquam sit amet justo. Ut lectus est, tincidunt blandit felis iaculis, sagittis eleifend orci.",
         author: "Maria"
       }
     ],

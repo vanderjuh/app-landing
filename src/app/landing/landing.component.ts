@@ -4,6 +4,7 @@ import { lastValueFrom } from 'rxjs';
 
 import { AreaOfActivityResponse } from '../shared/classes/area-of-activity-response.class';
 import { LandingResponse } from '../shared/classes/landing-response.class';
+import { TestimonyResponse } from '../shared/classes/testimony-response.class';
 import { LandingApiService } from '../shared/services/api/landing-api/landing-api.service';
 
 @Component({
@@ -15,6 +16,7 @@ export class LandingComponent implements OnInit {
 
   response!: LandingResponse;
   selectedActivity?: AreaOfActivityResponse;
+  selectedTestimony?: TestimonyResponse;
 
   constructor(private landingApiService: LandingApiService) { }
 
@@ -23,6 +25,9 @@ export class LandingComponent implements OnInit {
     this.response = await lastValueFrom(this.landingApiService.get());
     if (this.response.areasOfActivity?.length) {
       this.selectedActivity = this.response.areasOfActivity[0];
+    }
+    if (this.response.testimonies?.length) {
+      this.selectedTestimony = this.response.testimonies[0];
     }
   }
 
@@ -39,5 +44,16 @@ export class LandingComponent implements OnInit {
 
   onSelectedActivity(activity: AreaOfActivityResponse): void {
     this.selectedActivity = activity;
+  }
+
+  onTestimonyArrow(direction: 'back' | 'forward'): void {
+    const selectedId = this.selectedTestimony?.id;
+    const first = this.response.testimonies[0];
+    if (selectedId) {
+      let currentIndex = this.response.testimonies.findIndex(x => x.id === selectedId);
+      (direction === 'back') ? currentIndex-- : currentIndex++;
+      const next = this.response.testimonies[currentIndex];
+      this.selectedTestimony = (next ?? first);
+    }
   }
 }
