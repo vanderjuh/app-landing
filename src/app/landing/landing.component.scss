@@ -307,6 +307,8 @@ $page-padding: 0 5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    position: relative;
+    z-index: 9;
     @extend .background-gradient-accent;
     .faq-list {
       width: 70%;
@@ -344,6 +346,12 @@ $page-padding: 0 5rem;
           display: block !important;
         }
       }
+    }
+    .flower-14 {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
     }
   }
   .flower-7:before {
