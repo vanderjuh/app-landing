@@ -118,4 +118,20 @@
       <img class="flower-5" src="../../assets/imgs/flower-5.png" alt="Flower" />
     </div>
   </section>
+  <section class="faq section">
+    <h2>Perguntas Frequentes</h2>
+    <div class="faq-list">
+      <div *ngFor="let faq of response.faq"
+        [ngClass]="{'faq-list-item':true,'faq-list-item-selected': (selectedFaq?.id === faq.id)}"
+        (click)="onSelectedFaq(faq)">
+        <div class="faq-list-item-header">
+          <h3>{{faq.question}}</h3>
+          <span class="material-symbols-rounded">
+            expand_more
+          </span>
+        </div>
+        <p>{{faq.answer}}</p>
+      </div>
+    </div>
+  </section>
 </div>

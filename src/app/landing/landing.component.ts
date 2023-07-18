@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { lastValueFrom } from 'rxjs';
 
 import { AreaOfActivityResponse } from '../shared/classes/area-of-activity-response.class';
+import { FaqResponse } from '../shared/classes/faq-response.class';
 import { LandingResponse } from '../shared/classes/landing-response.class';
 import { TestimonyResponse } from '../shared/classes/testimony-response.class';
 import { LandingApiService } from '../shared/services/api/landing-api/landing-api.service';
@@ -17,6 +18,7 @@ export class LandingComponent implements OnInit {
   response!: LandingResponse;
   selectedActivity?: AreaOfActivityResponse;
   selectedTestimony?: TestimonyResponse;
+  selectedFaq?: FaqResponse;
 
   constructor(private landingApiService: LandingApiService) { }
 
@@ -55,5 +57,9 @@ export class LandingComponent implements OnInit {
       const next = this.response.testimonies[currentIndex];
       this.selectedTestimony = (next ?? first);
     }
+  }
+
+  onSelectedFaq(faq: FaqResponse): void {
+    this.selectedFaq = this.selectedFaq?.id != faq.id ? faq : undefined;
   }
 }

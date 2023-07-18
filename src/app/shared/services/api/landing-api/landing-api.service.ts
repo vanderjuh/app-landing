@@ -137,22 +137,27 @@ export class LandingApiService {
     ],
     faq: [
       {
+        id: 1,
         question: "Como funciona o atendimento online?",
         answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       },
       {
+        id: 2,
         question: "Posso usar convênio",
         answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       },
       {
+        id: 3,
         question: "Como funciona o sigilo?",
         answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       },
       {
+        id: 4,
         question: "Como inicio o tratamento?",
         answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       },
       {
+        id: 5,
         question: "Quanto tempo duram as sessões?",
         answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       }
